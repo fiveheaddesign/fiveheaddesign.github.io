@@ -1,7 +1,7 @@
 const backgrounds = [
-    "images/bg01.webp",
-    "images/bg02.webp",
-    "images/bg03.webp"
+    "./images/bg01.webp",
+    "./images/bg02.webp",
+    "./images/bg03.webp"
 ];
 
 let current = 0;
