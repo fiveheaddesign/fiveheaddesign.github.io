@@ -92,7 +92,7 @@ li {
 /* HERO & ABOUT SECTION */
 
 .hero, .about {
-    background-image: url("./images/5head_front.png");
+    background-image: url("images/5head_front.png");
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
@@ -118,7 +118,7 @@ li {
 /* PORTFOLIO SECITON */
 
 .portfolio {
-    background-image: url("./images/5head_back.png");
+    background-image: url("images/5head_back.png");
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
