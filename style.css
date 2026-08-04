@@ -92,7 +92,7 @@ li {
 /* HERO & ABOUT SECTION */
 
 .hero, .about {
-    background-image: url("images/5head_front.png");
+    background-image: url("./images/5head_front.png");
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
@@ -118,7 +118,7 @@ li {
 /* PORTFOLIO SECITON */
 
 .portfolio {
-    background-image: url("images/5head_back.png");
+    background-image: url("./images/5head_back.png");
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
@@ -174,40 +174,40 @@ li {
 }
 
 .projitem1 {
-    background-image: url("images/img_placeholder_01.webp");
+    background-image: url("./images/img_placeholder_01.webp");
 }
 .projitem2 {
-    background-image: url("images/img_placeholder_02.webp");
+    background-image: url("./images/img_placeholder_02.webp");
 }
 .projitem3 {
-    background-image: url("images/img_placeholder_03.webp");
+    background-image: url("./images/img_placeholder_03.webp");
 }
 .projitem4 {
-    background-image: url("images/img_placeholder_04.webp");
+    background-image: url("./images/img_placeholder_04.webp");
 }
 .projitem5 {
-    background-image: url("images/img_placeholder_05.webp");
+    background-image: url("./images/img_placeholder_05.webp");
 }
 .projitem6 {
-    background-image: url("images/img_placeholder_06.webp");
+    background-image: url("./images/img_placeholder_06.webp");
 }
 .projitem7 {
-    background-image: url("images/img_placeholder_07.webp");
+    background-image: url("./images/img_placeholder_07.webp");
 }
 .projitem8 {
-    background-image: url("images/img_placeholder_08.webp");
+    background-image: url("./images/img_placeholder_08.webp");
 }
 .projitem9 {
-    background-image: url("images/img_placeholder_09.webp");
+    background-image: url("./images/img_placeholder_09.webp");
 }
 .projitem10 {
-    background-image: url("images/img_placeholder_01.webp");
+    background-image: url("./images/img_placeholder_01.webp");
 }
 .projitem11 {
-    background-image: url("images/img_placeholder_02.webp");
+    background-image: url("./images/img_placeholder_02.webp");
 }
 .projitem12 {
-    background-image: url("images/img_placeholder_03.webp");
+    background-image: url("./images/img_placeholder_03.webp");
 }
 
 
@@ -316,7 +316,7 @@ body.modal-open {
     display: flex;
     width: 100%;
     height: 400px;
-    background-image: url("images/img_placeholder_01.webp");
+    background-image: url("./images/img_placeholder_01.webp");
 }
 
 
@@ -326,7 +326,7 @@ body.modal-open {
 /* CONTACT SECTION */
 
 .contact {
-    background-image: url("images/5head_back.png");
+    background-image: url("./images/5head_back.png");
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
