@@ -210,10 +210,13 @@ li {
     font-weight: 400;
     font-size: 2.4rem;
     color: var(--beige);
+    padding: 0px 5px 0px 5px;
+    margin: 0px;
 }
 
 .contactlinks a:hover {
-    text-decoration: underline 2px dotted;
+    background: var(--beige);
+    color: var(--red);
 }
 
 .contactrow {
@@ -354,7 +357,7 @@ li {
  
   .carousel-card h3 {
     margin: 0.85rem 0 0.35rem;
-    font-size: clamp(1rem, calc(0.055rem + 2.955vw), 3.6rem);
+    font-size: clamp(1.8rem, calc(1.145rem + 2.045vw), 3.6rem);
     font-weight: 600;
     color: var(--carousel-title-color);
   }
