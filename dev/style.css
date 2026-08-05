@@ -6,21 +6,6 @@
     padding: 0;
 }
 
-:root {
-    --carousel-width: 80vw;
-    --carousel-gap: 1.5rem;
-
-    --cards-visible: 3;
-
-    --modal-width: 80vw;
-    --modal-height: 80vh;
-    --modal-gutter: 3rem;
-
-    --radius: 16px;
-
-    --transition: 0.3s ease;
-}
-
 html {
     scroll-behavior: smooth;
     font-size: 62.5%;
