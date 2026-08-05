@@ -86,121 +86,95 @@
                 </ul>
             </div>
 
-            <div class="carousel-wrapper">
+        <!-- Carousel start here -->
 
-                <button class="carousel-btn prev" aria-label="Previous">
-                    &#10094;
-                </button>
+        <div class="carousel-wrapper" data-carousel>
+            <div class="carousel-nav-group">
+            <button class="carousel-btn" data-carousel-prev aria-label="Previous">
+            <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button class="carousel-btn carousel-btn--skip" data-carousel-start aria-label="Skip to start">
+            <svg viewBox="0 0 24 24"><path d="M17 17l-6-6 6-6"/><path d="M11 17l-6-6 6-6"/></svg>
+            </button>
+        </div>
 
-                <div class="carousel" id="carousel">
-
-                    <div class="card">
-                        <button class="card-image" data-title="Title One" data-image="https://picsum.photos/800" data-description="This is a much longer description that appears inside the modal.">
-                        <img src="./images/img_placeholder_01.webp" alt="Title One">
-                        </button>
-                        <div class="card-content">
-                            <h3>Title One</h3>
-                            <p>Short description.</p>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <img src="./images/img_placeholder_02.webp" alt="">
-                        <div class="card-content">
-                            <h3>Title Two</h3>
-                            <p>Description goes here.</p>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <img src="./images/img_placeholder_03.webp" alt="">
-                        <div class="card-content">
-                            <h3>Title Three</h3>
-                            <p>Description goes here.</p>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <img src="./images/img_placeholder_04.webp" alt="">
-                        <div class="card-content">
-                            <h3>Title Four</h3>
-                            <p>Description goes here.</p>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <img src="./images/img_placeholder_05.webp" alt="">
-                        <div class="card-content">
-                            <h3>Title Five</h3>
-                            <p>Description goes here.</p>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <img src="./images/img_placeholder_06.webp" alt="">
-                        <div class="card-content">
-                            <h3>Title Six</h3>
-                            <p>Description goes here.</p>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <img src="./images/img_placeholder_07.webp" alt="">
-                        <div class="card-content">
-                            <h3>Title Seven</h3>
-                            <p>Description goes here.</p>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <img src="./images/img_placeholder_08.webp" alt="">
-                        <div class="card-content">
-                            <h3>Title Eight</h3>
-                            <p>Description goes here.</p>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <img src="./images/img_placeholder_09.webp" alt="">
-                        <div class="card-content">
-                            <h3>Title Nine</h3>
-                            <p>Description goes here.</p>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <img src="./images/img_placeholder_10.webp" alt="">
-                        <div class="card-content">
-                            <h3>Title Ten</h3>
-                            <p>Description goes here.</p>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <img src="./images/img_placeholder_11.webp" alt="">
-                        <div class="card-content">
-                            <h3>Title Eleven</h3>
-                            <p>Description goes here.</p>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <img src="./images/img_placeholder_12.webp" alt="">
-                        <div class="card-content">
-                            <h3>Title Twelve</h3>
-                            <p>Description goes here.</p>
-                        </div>
-                    </div>
-
+            
+            <div class="carousel-track" data-carousel-track tabindex="0" aria-label="Project carousel">
+                <div class="carousel-card">
+                <img src="./images/img_placeholder_01.webp" alt="Project one thumbnail">
+                <h3>Project title one</h3>
+                <p>Short one or two line description of the project goes here.</p>
                 </div>
-
-                <button class="carousel-btn next" aria-label="Next">
-                    &#10095;
+                <div class="carousel-card">
+                <img src="./images/img_placeholder_02.webp" alt="Project two thumbnail">
+                <h3>Project title two</h3>
+                <p>Short one or two line description of the project goes here.</p>
+                </div>
+                <div class="carousel-card">
+                <img src="./images/img_placeholder_03.webp" alt="Project three thumbnail">
+                <h3>Project title three</h3>
+                <p>Short one or two line description of the project goes here.</p>
+                </div>
+                <div class="carousel-card">
+                <img src="./images/img_placeholder_04.webp" alt="Project four thumbnail">
+                <h3>Project title four</h3>
+                <p>Short one or two line description of the project goes here.</p>
+                </div>
+                <div class="carousel-card">
+                <img src="./images/img_placeholder_05.webp" alt="Project five thumbnail">
+                <h3>Project title five</h3>
+                <p>Short one or two line description of the project goes here.</p>
+                </div>
+                <div class="carousel-card">
+                <img src="./images/img_placeholder_06.webp" alt="Project six thumbnail">
+                <h3>Project title six</h3>
+                <p>Short one or two line description of the project goes here.</p>
+                </div>
+                <div class="carousel-card">
+                <img src="./images/img_placeholder_07.webp" alt="Project seven thumbnail">
+                <h3>Project title seven</h3>
+                <p>Short one or two line description of the project goes here.</p>
+                </div>
+                <div class="carousel-card">
+                <img src="./images/img_placeholder_08.webp" alt="Project eight thumbnail">
+                <h3>Project title eight</h3>
+                <p>Short one or two line description of the project goes here.</p>
+                </div>
+                <div class="carousel-card">
+                <img src="./images/img_placeholder_09.webp" alt="Project nine thumbnail">
+                <h3>Project title nine</h3>
+                <p>Short one or two line description of the project goes here.</p>
+                </div>
+                <div class="carousel-card">
+                <img src="./images/img_placeholder_10.webp" alt="Project ten thumbnail">
+                <h3>Project title ten</h3>
+                <p>Short one or two line description of the project goes here.</p>
+                </div>
+                <div class="carousel-card">
+                <img src="./images/img_placeholder_11.webp" alt="Project eleven thumbnail">
+                <h3>Project title eleven</h3>
+                <p>Short one or two line description of the project goes here.</p>
+                </div>
+                <div class="carousel-card">
+                <img src="./images/img_placeholder_12.webp" alt="Project twleve thumbnail">
+                <h3>Project title twelve</h3>
+                <p>Short one or two line description of the project goes here.</p>
+                </div>
+            </div>
+            
+            <div class="carousel-nav-group">
+                <button class="carousel-btn" data-carousel-next aria-label="Next">
+                <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
                 </button>
-
+                <button class="carousel-btn carousel-btn--skip" data-carousel-end aria-label="Skip to end">
+                <svg viewBox="0 0 24 24"><path d="M7 17l6-6-6-6"/><path d="M13 17l6-6-6-6"/></svg>
+                </button>
             </div>
 
         </div>
+
+
+        </div>   
 
     </section>
 
@@ -285,22 +259,45 @@
     </section>
 
 
+
+
+
 <!-- MODAL -->
 
-<div id="modal" class="modal">
-
+<div class="modal" id="project-1">
     <div class="modal-window">
-
-        <button class="modal-close" aria-label="Close modal">
+        <button class="modal-close" aria-label="Close">
             &times;
         </button>
-
         <div class="modal-content">
-            Lorem ipsum dolor sit.
+            <h2>Project One</h2>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil eligendi velit, inventore dignissimos eaque rerum corrupti animi unde quidem non eveniet, cumque aspernatur iure eos modi doloribus, dolorum voluptate magnam!
+            </p>
+            <img src="images/img_placeholder_01.webp" alt="">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim incidunt repellendus aspernatur saepe dicta quod minus quidem ad, amet nostrum soluta cum, qui architecto laborum maxime ut. Ducimus, maiores? Vitae.
+            </p>
         </div>
-
     </div>
+</div>
 
+<div class="modal" id="project-2">
+    <div class="modal-window">
+        <button class="modal-close" aria-label="Close">
+            &times;
+        </button>
+        <div class="modal-content">
+            <h2>Project Two</h2>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum nisi architecto eveniet harum ea odio magnam, accusamus, eius eligendi voluptatum modi ullam facere dolore non deserunt sint distinctio ducimus sapiente!
+            </p>
+            <img src="images/img_placeholder_02.webp" alt="">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati rem dolorum maxime officia temporibus corporis nam, ad consequatur architecto, error ipsam quam voluptatem minus possimus quasi iusto ab commodi. Eaque..
+            </p>
+        </div>
+    </div>
 </div>
 
 
