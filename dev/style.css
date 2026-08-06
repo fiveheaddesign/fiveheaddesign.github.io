@@ -149,11 +149,6 @@ li {
     z-index: 2;
 }
 
-.contentwrapper {
-  position: relative;
-  z-index: 3; /* sits above both image layers */
-}
-
 
 
 
@@ -167,7 +162,7 @@ li {
       background-size: cover; 
       background-position: center; 
       background-repeat: no-repeat;  */
-      background: var(--red);
+      background-color: var(--red);
   }
 
   .herocontent, .aboutcontent {
@@ -179,6 +174,8 @@ li {
       padding: 10px;
       display: flex;
       flex-direction: column;
+      position: relative;
+      z-index: 3; /* sits above both image layers */
   }
 
   @media (max-width: 768px) {
@@ -214,6 +211,8 @@ li {
         padding: 10px;
         display: flex;
         flex-direction: column;
+        position: relative;
+        z-index: 3; /* sits above both image layers */
     }
 
 
@@ -236,7 +235,7 @@ li {
 
 .contactcontent {
     display: flex;
-    max-width: 40vw;
+    width: 40vw;
     /* height: 50vh; */
     background-color: var(--red);
     border: 6px solid var(--beige);
@@ -244,11 +243,13 @@ li {
     padding: 10px;
     display: flex;
     flex-direction: column;
+    position: relative;
+    z-index: 3; /* sits above both image layers */
 }
 
 @media (max-width: 768px) {
     .contactcontent {
-      max-width: 90vw; /* Hide sidebar on mobile */
+      width: 90vw; /* Hide sidebar on mobile */
     }
   }
 
