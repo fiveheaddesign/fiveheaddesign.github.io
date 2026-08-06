@@ -100,35 +100,72 @@ li {
 }
 
 
+/* SECTIONS */
 
+.section {
+  position: relative;
+  overflow: hidden;
+  max-width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* background images  */
+.section-img {
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    height: auto;         /* preserves each image's own aspect ratio */
+    transform: translateX(-50%);
+    pointer-events: none; /* purely decorative layers */
+}
+
+.section-img--top {
+    top: 0;
+    z-index: 1;
+}
+.section-img--bottom {
+    bottom: 0;
+    z-index: 2;
+}
+
+.contentwrapper {
+  position: relative;
+  z-index: 3; /* sits above both image layers */
+}
 
 
 
 /* HERO & ABOUT SECTION */
 
-    .hero, .about {
-        background-image: url("./images/5head_front.png");
-        background-size: cover; 
-        background-position: center; 
-        background-repeat: no-repeat; 
-        max-width: 100vw;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+  .hero, .about {
+      /* background-image: url("./images/5head_front.png");
+      background-size: cover; 
+      background-position: center; 
+      background-repeat: no-repeat;  */
+      background: var(--red);
+  }
 
+  .herocontent, .aboutcontent {
+      max-width: 50vw;
+      /* height: 50vh; */
+      background-color: var(--beige);
+      border: 6px solid var(--red);
+      gap: 10px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+  }
+
+  @media (max-width: 768px) {
     .herocontent, .aboutcontent {
-        display: flex;
-        max-width: 50vw;
-        /* height: 50vh; */
-        background-color: var(--beige);
-        border: 6px solid var(--red);
-        gap: 10px;
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
+      max-width: 90vw; /* Hide sidebar on mobile */
     }
+  }
+
+    
 
 
 
@@ -138,16 +175,12 @@ li {
 /* PORTFOLIO SECITON  */
 
     .portfolio {
-        background-image: url("./images/5head_back.png");
+        /* background-image: url("./images/5head_back.png");
         background-size: cover; 
         background-position: center; 
-        background-repeat: no-repeat; 
-        max-width: 100vw;
-        height: 100vh;
-        display: flex;
+        background-repeat: no-repeat;  */
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        background: var(--beige);
     }
 
     .portfoliocontent {
@@ -172,20 +205,16 @@ li {
 /* CONTACT SECTION */
 
 .contact {
-    background-image: url("./images/5head_back.png");
+    /* background-image: url("./images/5head_back.png");
     background-size: cover; 
     background-position: center; 
-    background-repeat: no-repeat; 
-    max-width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-repeat: no-repeat;  */ 
+    background: var(--beige);
 }
 
 .contactcontent {
     display: flex;
-    width: 40vw;
+    max-width: 40vw;
     /* height: 50vh; */
     background-color: var(--red);
     border: 6px solid var(--beige);
@@ -194,6 +223,12 @@ li {
     display: flex;
     flex-direction: column;
 }
+
+@media (max-width: 768px) {
+    .contactcontent {
+      max-width: 90vw; /* Hide sidebar on mobile */
+    }
+  }
 
 .contactlinks {
     display: flex;
@@ -242,19 +277,23 @@ li {
     flex-grow: 1;
 }
 
+.navpositive, .navnegative {
+  display: flex;
+  font-weight: 700;
+  font-size: clamp(1.400rem, calc(1.040rem + 1.125vw), 3.200rem);
+  letter-spacing: 1px;
+  padding-left: clamp(2px, calc(1.4px + 0.188vw), 5px);
+  padding-right: clamp(2px, calc(1.4px + 0.188vw), 5px);
+  width: 100%;
+}
+
 .navpositive {
-    display: flex;
-    font-weight: 700;
-    font-size: 2.4rem;
-    letter-spacing: 1px;
-    width: 100%;
     border-bottom: 2px solid var(--red);
     background: var(--beige);
 }
 
 .navpositive a {
     color: var(--red);
-    padding: 0px 5px 0px 5px;
 }
 
 .navpositive a:hover {
@@ -263,18 +302,12 @@ li {
 }
 
 .navnegative {
-    display: flex;
-    font-weight: 700;
-    font-size: 2.4rem;
-    letter-spacing: 1px;
-    width: 100%;
     border-bottom: 2px solid var(--beige);
     background: var(--red);
 }
 
 .navnegative a {
     color: var(--beige);
-    padding: 0px 5px 0px 5px;
 }
 
 .navnegative a:hover {
@@ -300,7 +333,7 @@ li {
     --carousel-gap: 1.5rem;
     --carousel-card-bg: #FFDFB9;
     --carousel-btn-size: 2.75rem;
-    --carousel-btn-color: #1a1a1a;
+    /* --carousel-btn-color: limegreen; */
     --carousel-btn-hover-color: #c14e2a;
     --carousel-title-color: #A41D3E;
     --carousel-desc-color: #010101;
@@ -310,9 +343,9 @@ li {
     --carousel-btn-bg: #FFDFB9;      /* solid fill */
     --carousel-btn-stroke: #A41D3E;   /* chevron colour, contrasts with bg */
     --carousel-btn-fill: none;        /* chevron stays outline-only, no shape fill */
-    --carousel-btn-hover-border: #c14e2a;
-    --carousel-btn-hover-bg: transparent;
-    --carousel-btn-hover-stroke: #c14e2a;
+    --carousel-btn-hover-border: var(--beige);
+    --carousel-btn-hover-bg: var(--red);
+    --carousel-btn-hover-stroke: var(--beige);
     --carousel-btn-hover-fill: none;
  
     width: 100%;
