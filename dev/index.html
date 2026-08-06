@@ -112,69 +112,65 @@
         </div>
 
             
-            <div class="carousel-track" data-carousel-track tabindex="0" aria-label="Project carousel">
-                <div class="carousel-card">
-                    <img src="./images/img_placeholder_01.webp" alt="Project one thumbnail">
+            <div class="carousel-track" data-carousel-track>
+
+
+
+
+                <button class="carousel-card" data-modal-index="0">
+                    <img src="./images/img_placeholder_01.webp" alt="">
                     <h3>Project title one</h3>
-                    <p>Short one or two line description of the project goes here.</p>
-                </div>
-                <div class="carousel-card">
-                    <img src="./images/img_placeholder_02.webp" alt="Project two thumbnail">
+                    <p>Short description of the project goes here.</p>
+                </button>
+                <template data-modal-content>
+                    <p>Placeholder: write project one's full case-study content here — process, tools used, outcomes, whatever you like. This div is yours to fill in freely; the modal just drops it in as-is.</p>
+                    <p>You can add more paragraphs, additional images, lists — anything that's valid HTML.</p>
+                </template>
+                
+
+
+
+                <button class="carousel-card" data-modal-index="1">
+                    <img src="./images/img_placeholder_02.webp" alt="">
                     <h3>Project title two</h3>
-                    <p>Short one or two line description of the project goes here.</p>
-                </div>
-                <div class="carousel-card">
-                    <img src="./images/img_placeholder_03.webp" alt="Project three thumbnail">
+                    <p>Short description of the project goes here.</p>
+                </button>
+                <template data-modal-content>
+                    <p>Placeholder: project two's unique content goes here — completely independent from project one's.</p>
+                </template>
+                
+
+
+
+                <button class="carousel-card" data-modal-index="2">
+                    <img src="./images/img_placeholder_03.webp" alt="">
                     <h3>Project title three</h3>
-                    <p>Short one or two line description of the project goes here.</p>
-                </div>
-                <div class="carousel-card">
-                    <img src="./images/img_placeholder_04.webp" alt="Project four thumbnail">
-                    <h3>Project title four</h3>
-                    <p>Short one or two line description of the project goes here.</p>
-                </div>
-                    <div class="carousel-card">
-                    <img src="./images/img_placeholder_05.webp" alt="Project five thumbnail">
-                    <h3>Project title five</h3>
-                    <p>Short one or two line description of the project goes here.</p>
-                </div>
-                <div class="carousel-card">
-                    <img src="./images/img_placeholder_06.webp" alt="Project six thumbnail">
-                    <h3>Project title six</h3>
-                    <p>Short one or two line description of the project goes here.</p>
-                </div>
-                <div class="carousel-card">
-                    <img src="./images/img_placeholder_07.webp" alt="Project seven thumbnail">
-                    <h3>Project title seven</h3>
-                    <p>Short one or two line description of the project goes here.</p>
-                </div>
-                <div class="carousel-card">
-                    <img src="./images/img_placeholder_08.webp" alt="Project eight thumbnail">
-                    <h3>Project title eight</h3>
-                  <p>Short one or two line description of the project goes here.</p>
-                </div>
-                <div class="carousel-card">
-                    <img src="./images/img_placeholder_09.webp" alt="Project nine thumbnail">
-                    <h3>Project title nine</h3>
-                    <p>Short one or two line description of the project goes here.</p>
-                </div>
-                <div class="carousel-card">
-                    <img src="./images/img_placeholder_10.webp" alt="Project ten thumbnail">
-                    <h3>Project title ten</h3>
-                    <p>Short one or two line description of the project goes here.</p>
-                </div>
-                <div class="carousel-card">
-                    <img src="./images/img_placeholder_11.webp" alt="Project eleven thumbnail">
-                    <h3>Project title eleven</h3>
-                    <p>Short one or two line description of the project goes here.</p>
-                </div>
-                <div class="carousel-card">
-                    <img src="./images/img_placeholder_12.webp" alt="Project twleve thumbnail">
-                    <h3>Project title twelve</h3>
-                    <p>Short one or two line description of the project goes here.</p>
-                </div>
-            </div>
+                    <p>Short description of the project goes here.</p>
+                </button>
+                <template data-modal-content>
+                    <p>Placeholder: project three's unique content goes here.</p>
+                </template>
             
+            
+            
+            
+            
+            
+                <button class="carousel-card" data-modal-index="3">
+                    <img src="./images/img_placeholder_04.webp" alt="">
+                    <h3>Project title three</h3>
+                    <p>Short description of the project goes here.</p>
+                </button>
+                <template data-modal-content>
+                    <p>Placeholder: project three's unique content goes here.</p>
+                </template>
+            
+            
+            
+            
+            
+            
+            </div>
             <div class="carousel-nav-group">
                 <button class="carousel-btn" data-carousel-next aria-label="Next">
                 <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
@@ -183,7 +179,6 @@
                 <svg viewBox="0 0 24 24"><path d="M7 17l6-6-6-6"/><path d="M13 17l6-6-6-6"/></svg>
                 </button>
             </div>
-
         </div>
 
 
@@ -239,7 +234,7 @@
 
     <section class="contact section" id="contact">
 
-        <img class="section-img section-img--top"  src="./images/bg_unicorn_red_top.webp" alt="">
+        <img class="section-img section-img--top"  src=".images/bg_unicorn_red_top.webp" alt="">
         <img class="section-img section-img--bottom" src="./images/bg_text_red_bottom.webp" alt="">
 
         <div class="contactcontent contentwrapper">
@@ -290,42 +285,31 @@
 
 
 <!-- MODAL -->
-<!-- 
-<div class="modal" id="project-1">
-    <div class="modal-window">
-        <button class="modal-close" aria-label="Close">
-            &times;
-        </button>
-        <div class="modal-content">
-            <h2>Project One</h2>
-            <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil eligendi velit, inventore dignissimos eaque rerum corrupti animi unde quidem non eveniet, cumque aspernatur iure eos modi doloribus, dolorum voluptate magnam!
-            </p>
-            <img src="images/img_placeholder_01.webp" alt="">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim incidunt repellendus aspernatur saepe dicta quod minus quidem ad, amet nostrum soluta cum, qui architecto laborum maxime ut. Ducimus, maiores? Vitae.
-            </p>
-        </div>
+
+<div class="modal" data-modal aria-hidden="true">
+  <div class="modal-window" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal-close" data-modal-close aria-label="Close">&times;</button>
+ 
+    <button class="carousel-btn" data-modal-prev aria-label="Previous project">
+      <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+ 
+    <div class="modal-scroll">
+      <h2 id="modal-title" data-modal-title></h2>
+      <img data-modal-image src="" alt="">
+      <div class="modal-body" data-modal-body>
+        <!-- populated from this project's <template> at open time -->
+      </div>
     </div>
+ 
+    <button class="carousel-btn" data-modal-next aria-label="Next project">
+      <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+  </div>
 </div>
 
-<div class="modal" id="project-2">
-    <div class="modal-window">
-        <button class="modal-close" aria-label="Close">
-            &times;
-        </button>
-        <div class="modal-content">
-            <h2>Project Two</h2>
-            <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum nisi architecto eveniet harum ea odio magnam, accusamus, eius eligendi voluptatum modi ullam facere dolore non deserunt sint distinctio ducimus sapiente!
-            </p>
-            <img src="images/img_placeholder_02.webp" alt="">
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati rem dolorum maxime officia temporibus corporis nam, ad consequatur architecto, error ipsam quam voluptatem minus possimus quasi iusto ab commodi. Eaque..
-            </p>
-        </div>
-    </div>
-</div> -->
+
+
 
 
 </body>

@@ -40,6 +40,19 @@ html {
 */
 
 
+:root {
+  --carousel-btn-size: 2.75rem;
+  --carousel-btn-border: #FFDFB9;
+  --carousel-btn-bg: #FFDFB9;
+  --carousel-btn-stroke: #A41D3E;
+  --carousel-btn-fill: none;
+  --carousel-btn-hover-border: #FFDFB9;
+  --carousel-btn-hover-bg: #A41D3E;
+  --carousel-btn-hover-stroke: #FFDFB9;
+  --carousel-btn-hover-fill: none;
+}
+
+
 
 
 body {
@@ -100,6 +113,11 @@ li {
 }
 
 
+
+
+
+
+
 /* SECTIONS */
 
 .section {
@@ -135,6 +153,10 @@ li {
   position: relative;
   z-index: 3; /* sits above both image layers */
 }
+
+
+
+
 
 
 
@@ -271,10 +293,15 @@ li {
 
 
 
+
+
+
+
+
 /* NAVBARS */
 
 .spacer {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 .navpositive, .navnegative {
@@ -288,40 +315,47 @@ li {
 }
 
 .navpositive {
-    border-bottom: 2px solid var(--red);
-    background: var(--beige);
+  border-bottom: 2px solid var(--red);
+  background: var(--beige);
 }
 
 .navpositive a {
-    color: var(--red);
-}
-
-.navpositive a:hover {
-    background-color: var(--red);
-    color: var(--beige);
+  color: var(--red);
 }
 
 .navnegative {
-    border-bottom: 2px solid var(--beige);
-    background: var(--red);
+  color: var(--red);
+}
+
+.navpositive a:hover {
+  background-color: var(--red);
+  color: var(--beige);
+}
+
+.navnegative {
+  border-bottom: 2px solid var(--beige);
+  background: var(--red);
 }
 
 .navnegative a {
-    color: var(--beige);
+  color: var(--beige);
 }
 
 .navnegative a:hover {
-    background-color: var(--beige);
-    color: var(--red);
+  background-color: var(--beige);
+  color: var(--red);
 }
 
 .beige {
-    color: var(--beige);
+  color: var(--beige);
 }
 
 .red {
-    color: var(--red);
+  color: var(--red);
 }
+
+
+
 
 
 
@@ -378,6 +412,12 @@ li {
     flex-direction: column;
     background: var(--carousel-card-bg);
     padding: clamp(5px, calc(-0.455px + 1.705vw), 20px);
+    border: none;
+    appearance: none;
+    text-align: left;
+    cursor: pointer;
+    font: inherit;
+    border-radius: 5px;
   }
  
   .carousel-card img {
@@ -401,6 +441,10 @@ li {
     line-height: 1.45;
     color: var(--carousel-desc-color);
   }
+
+  .carousel-card:hover {
+    cursor: pointer;
+  }
  
   .carousel-nav-group {
     display: flex;
@@ -423,24 +467,24 @@ li {
     justify-content: center;
     transition: border-color 0.2s ease, background-color 0.2s ease, opacity 0.2s ease;
   }
- 
+
   .carousel-btn:hover:not(:disabled),
   .carousel-btn:focus-visible:not(:disabled) {
     border-color: var(--carousel-btn-hover-border);
     background: var(--carousel-btn-hover-bg);
   }
- 
+
   .carousel-btn:hover:not(:disabled) svg,
   .carousel-btn:focus-visible:not(:disabled) svg {
     stroke: var(--carousel-btn-hover-stroke);
     fill: var(--carousel-btn-hover-fill);
   }
- 
+
   .carousel-btn:focus-visible {
     outline: 2px solid var(--carousel-btn-hover-border);
     outline-offset: 2px;
   }
- 
+
   .carousel-btn svg {
     width: 18px;
     height: 18px;
@@ -451,12 +495,11 @@ li {
     stroke-linejoin: round;
     transition: stroke 0.2s ease, fill 0.2s ease;
   }
- 
+
   .carousel-btn:disabled {
-    opacity: 0.3;
-    cursor: default;
+    opacity: 0.3; cursor: default;
   }
- 
+
   .carousel-btn--skip {
     width: calc(var(--carousel-btn-size) * 0.7);
     height: calc(var(--carousel-btn-size) * 0.7);
@@ -499,5 +542,148 @@ li {
 
 
 
+
+
+
 /* MODALS  */
+
+  .modal {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px); /* Safari */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+  }
+
+ 
+  .modal[data-open="true"] {
+    opacity: 1;
+    pointer-events: auto;
+  }
+ 
+  .modal-window {
+    position: relative;
+    background: var(--beige, #FFDFB9);
+    border: 6px solid var(--red, #A41D3E);
+    width: 80vw;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2.5rem;
+    transform: scale(0.96);
+    transition: transform 0.2s ease;
+  }
+
+ 
+  .modal[data-open="true"] .modal-window {
+    transform: scale(1);
+  }
+ 
+  .modal-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 2.25rem;
+    height: 2.25rem;
+    border: none;
+    background: transparent;
+    color: var(--red, #A41D3E);
+    font-size: 1.75rem;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .modal-close:hover {
+    opacity: 0.6;
+  }
+
+  .modal-scroll {
+    flex: 1;
+    height: 100%;
+    overflow-y: auto;
+    padding-right: 0.5rem; /* room so scrollbar doesn't sit on text */
+  }
+ 
+  .modal-scroll h2 {
+    color: var(--red, #A41D3E);
+    margin: 0 0 1rem;
+  }
+  .modal-scroll img {
+    width: 100%;
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+
+ 
+  .modal-content h2 {
+    color: var(--red, #A41D3E);
+    margin: 0 0 1rem;
+  }
+  .modal-content img {
+    width: 100%;
+    display: block;
+    margin-bottom: 1rem;
+  }
+  .modal-content p {
+    color: #1a1a1a;
+    line-height: 1.5;
+    margin: 0;
+  }
+ 
+  .modal-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 50%;
+    border: 1px solid var(--red, #A41D3E);
+    background: var(--beige, #FFDFB9);
+    color: var(--red, #A41D3E);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  .modal-nav:hover { background: var(--red, #A41D3E); color: var(--beige, #FFDFB9); }
+  .modal-nav svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+ 
+  .modal-prev { left: -4.5rem; }
+  .modal-next { right: -4.5rem; }
+ 
+  /* Collapse nav buttons inward on narrow viewports so they don't
+     get clipped off the edge of the screen */
+  @media (max-width: 700px) {
+    .modal-prev { left: 0.5rem; }
+    .modal-next { right: 0.5rem; }
+    .modal-nav { background: rgba(255, 223, 185, 0.85); }
+  }
+
+  .modal-body p {
+    color: #1a1a1a;
+    line-height: 1.5;
+    margin: 0 0 1rem;
+  }
+ 
+  /* Responsive: keep the 80vw/80vh box usable on small screens */
+  @media (max-width: 700px) {
+    .modal-window {
+      width: 92vw;
+      height: 88vh;
+      padding: 1.25rem;
+      gap: 0.5rem;
+      --carousel-btn-size: 2.25rem;
+    }
+  }
+
+
 
