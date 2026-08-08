@@ -1,0 +1,930 @@
+*, 
+*::before, 
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+@property --beige {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #FFDFB9;
+}
+
+@property --red {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #A41D3E;
+}
+
+@property --darkred {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #561324;
+}
+
+/*
+.advent-pro-<uniquifier> {
+  font-family: "Advent Pro", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+// <weight>: Use a value from 200 to 900
+// <uniquifier>: Use a unique and descriptive class name
+
+.source-sans-3-<uniquifier> {
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+*/
+
+
+:root {
+  --carousel-btn-size: 2.75rem;
+  --carousel-btn-border: var(--beige);
+  --carousel-btn-bg: var(--beige);
+  --carousel-btn-stroke: var(--red);
+  --carousel-btn-fill: none;
+  --carousel-btn-hover-border: var(--beige);
+  --carousel-btn-hover-bg: var(--red);
+  --carousel-btn-hover-stroke: var(--beige);
+  --carousel-btn-hover-fill: none;
+  --contact-bg-image: url('./images/pattern_1.svg');
+}
+
+
+
+.page-content {
+    filter: saturate(1);
+    transition: filter 0.5s ease;
+}
+
+.page-content.is-desaturated {
+    filter: saturate(0); /* try 0 for full grayscale, or tune between */
+}
+
+
+
+
+body {
+    font-family: "Advent Pro", sans-serif;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.med {
+    font-size: clamp(10px, calc(4.909px + 1.591vw), 24px);
+    /* font-size: 24px; */
+    font-weight: 100;
+    color: var(--red);
+    font-family: "Source Sans 3", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.med a {
+  text-decoration: underline 1px dashed var(--red);
+  text-underline-offset: 0.2em;
+  color: var(--red);
+}
+
+/* .small {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--red);
+} */
+
+.bold {
+    font-weight: 500;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.underline {
+    border-bottom: 2px dotted var(--red);
+}
+
+p {
+    padding: 0px 0px 10px 0px;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+button {
+    font: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+li {
+    color: var(--red);
+}
+
+
+
+
+
+
+
+/* SECTIONS */
+
+.section {
+  position: relative;
+  overflow: hidden;
+  max-width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* background images  */
+.section-img {
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    height: auto;         /* preserves each image's own aspect ratio */
+    transform: translateX(-50%);
+    pointer-events: none; /* purely decorative layers */
+}
+
+.section-img--top {
+    top: 0;
+    z-index: 1;
+}
+.section-img--bottom {
+    bottom: 0;
+    z-index: 2;
+}
+
+
+
+
+
+
+
+/* HERO & ABOUT SECTION */
+
+.hero, .about {
+  /* background-image: url("./images/5head_front.png");
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;  */
+  background-color: var(--red);
+}
+
+.herocontent, .aboutcontent {
+  max-width: 50vw;
+  /* height: 50vh; */
+  background-color: var(--beige);
+  border: 6px solid var(--red);
+  gap: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 3; /* sits above both image layers */
+}
+
+@media (max-width: 768px) {
+.herocontent, .aboutcontent {
+  max-width: 90vw; /* Hide sidebar on mobile */
+}
+}
+
+.ally-images {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+
+.ally-images img {
+  border-radius: 5px;
+  border: 2px solid var(--red);
+}
+
+
+
+
+
+
+/* PORTFOLIO SECITON  */
+
+.portfolio {
+    /* background-image: url("./images/5head_back.png");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;  */
+    flex-direction: column;
+    background: var(--beige);
+}
+
+.portfoliocontent {
+    width: 95vw;
+    padding: 20px;
+    background-color: var(--red);
+    border: 6px solid var(--beige);
+    gap: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 3; /* sits above both image layers */
+}
+
+
+
+
+
+
+
+
+
+/* CONTACT SECTION */
+
+.contact {
+  background-color: var(--beige);
+  background-image: var(--contact-bg-image);
+  background-repeat: repeat;
+  background-size: 176px 200px;
+}
+
+.contactcontent {
+  display: flex;
+  max-width: 90vw;
+  /* height: 50vh; */
+  min-height: clamp(30vh, calc(90vh - 60vw), 50vh);
+  background-color: var(--red);
+  border: 6px solid var(--beige);
+  gap: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 3; /* sits above both image layers */
+}
+.contactlinks {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  color: var(--beige);
+  padding: 5vh;
+}
+
+.contactlinks a {
+  font-weight: 400;
+  font-size: 2.4rem;
+  color: var(--beige);
+  padding: 0px 5px 0px 5px;
+  margin: 0px;
+}
+
+.contactlinks a:hover {
+  background: var(--beige);
+  color: var(--red);
+}
+
+.contactrow {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactrow a {
+  font-weight: 300;
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  margin: 0;
+}
+
+.contactrow img {
+  height: 15px;
+  width: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+/* NAVBARS */
+
+.spacer {
+  flex-grow: 1;
+}
+
+.navpositive, .navnegative {
+  display: flex;
+  font-weight: 700;
+  font-size: clamp(1.400rem, calc(1.040rem + 1.125vw), 3.200rem);
+  letter-spacing: 1px;
+  padding-left: clamp(2px, calc(1.4px + 0.188vw), 5px);
+  padding-right: clamp(2px, calc(1.4px + 0.188vw), 5px);
+  width: 100%;
+}
+
+.navpositive {
+  border-bottom: 2px solid var(--red);
+  background: var(--beige);
+}
+
+.navpositive a {
+  color: var(--red);
+}
+
+.navnegative {
+  color: var(--red);
+}
+
+.navpositive a:hover {
+  background-color: var(--red);
+  color: var(--beige);
+}
+
+.navnegative {
+  border-bottom: 2px solid var(--beige);
+  background: var(--red);
+}
+
+.navnegative a {
+  color: var(--beige);
+}
+
+.navnegative a:hover {
+  background-color: var(--beige);
+  color: var(--red);
+}
+
+.beige {
+  color: var(--beige);
+}
+
+.red {
+  color: var(--red);
+}
+
+
+
+
+
+
+
+
+/* CAROUSEL */
+
+.carousel-wrapper {
+  --carousel-gap: 1.5rem;
+  --carousel-card-bg: var(--beige,#FFDFB9);
+  --carousel-btn-size: 2.75rem;
+  --carousel-btn-hover-color: #c14e2a;
+  --carousel-title-color: var(--red, #A41D3E);
+  --carousel-desc-color: #010101;
+  --carousel-title-size: clamp(1rem, calc(0.273rem + 2.273vw), 3rem);
+  --carousel-desc-size: clamp(1rem, calc(0.709rem + 0.909vw), 1.8rem);
+
+  width: 100%;
+  margin-inline: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 20px 0 20px 0;
+}
+
+  .carousel-track {
+  display: flex;
+  gap: var(--carousel-gap);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scroll-padding-inline: var(--carousel-gap);
+  /* hide scrollbar cross-browser, buttons + snap handle navigation */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding-block: 0.25rem; /* room for card focus outline */
+}
+.carousel-track::-webkit-scrollbar { display: none; }
+
+.carousel-card {
+  flex: 0 0 calc((100% - (var(--carousel-gap) * 2)) / 3); /* 3-up desktop */
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  background: var(--carousel-card-bg);
+  padding: clamp(5px, calc(-0.455px + 1.705vw), 20px);
+  border: none;
+  appearance: none;
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+  border-radius: 5px;
+}
+
+.carousel-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  border-radius: 4px;
+}
+
+.carousel-card h3 {
+  margin: 0.85rem 0 0.35rem;
+  font-size: clamp(1.8rem, calc(1.145rem + 2.045vw), 3.6rem);
+  font-weight: 600;
+  color: var(--carousel-title-color);
+}
+
+.carousel-card p {
+  margin: 0;
+  font-size: clamp(1rem, calc(0.709rem + 0.909vw), 1.8rem);
+  line-height: 1.45;
+  color: var(--carousel-desc-color);
+}
+
+.carousel-card:hover {
+  cursor: pointer;
+}
+
+.carousel-nav-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  flex: 0 0 auto;
+}
+
+.carousel-btn {
+  flex: 0 0 auto;
+  width: var(--carousel-btn-size);
+  height: var(--carousel-btn-size);
+  border-radius: 50%;
+  border: 1px solid var(--carousel-btn-border);
+  background: var(--carousel-btn-bg);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s ease, background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.carousel-btn:hover:not(:disabled),
+.carousel-btn:focus-visible:not(:disabled) {
+  border-color: var(--carousel-btn-hover-border);
+  background: var(--carousel-btn-hover-bg);
+}
+
+.carousel-btn:hover:not(:disabled) svg,
+.carousel-btn:focus-visible:not(:disabled) svg {
+  stroke: var(--carousel-btn-hover-stroke);
+  fill: var(--carousel-btn-hover-fill);
+}
+
+.carousel-btn:focus-visible {
+  outline: 2px solid var(--carousel-btn-hover-border);
+  outline-offset: 2px;
+}
+
+.carousel-btn svg {
+  width: 18px;
+  height: 18px;
+  stroke: var(--carousel-btn-stroke);
+  fill: var(--carousel-btn-fill);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke 0.2s ease, fill 0.2s ease;
+}
+
+.carousel-btn:disabled {
+  opacity: 0.3; cursor: default;
+}
+
+.carousel-btn--skip {
+  width: calc(var(--carousel-btn-size) * 0.7);
+  height: calc(var(--carousel-btn-size) * 0.7);
+}
+
+.carousel-btn--skip svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* Responsive: 2-up, then 1-up */
+@media (max-width: 900px) {
+  .carousel-card {
+    flex-basis: calc((100% - var(--carousel-gap)) / 2);
+  }
+}
+
+@media (max-width: 560px) {
+  .carousel-wrapper {
+    width: 90vw;
+    gap: 0.5rem;
+  }
+  .carousel-card {
+    flex-basis: 100%;
+  }
+  .carousel-btn {
+    --carousel-btn-size: 2.25rem;
+  }
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .carousel-track {
+    scroll-behavior: auto;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* MODALS  */
+
+  .modal {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px); /* Safari */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+  }
+ 
+  .modal[data-open="true"] {
+    opacity: 1;
+    pointer-events: auto;
+  }
+ 
+  .modal-window {
+    position: relative;
+ 
+    /* Modal's own colour namespace — independent of --red/--beige.
+       Reassign any of these to restyle the modal only; the page
+       background and theme switcher are untouched either way. */
+    --modal-bg: var(--beige, #FFDFB9);
+    --modal-border-color: var(--red, #A41D3E);
+    --modal-heading-color: var(--red, #A41D3E);
+    --modal-subheading-color: var(--red, #A41D3E);
+    --modal-text-color: #1a1a1a;
+    --modal-close-color: var(--red, #A41D3E);
+ 
+    background: var(--modal-bg);
+    border: 6px solid var(--modal-border-color);
+    width: 80vw;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2.5rem;
+    transform: scale(0.96);
+    transition: transform 0.2s ease;
+  }
+ 
+  /* ------------------------------------------------------------
+     PER-PROJECT MODAL COLOURS
+     One block per project, keyed to the data-project-theme value
+     set on its carousel card. Only override the variables that
+     differ from the default above — any you omit fall back to
+     the .modal-window default (which itself follows --red/--beige).
+     Add/remove blocks freely as you add/remove projects.
+  ------------------------------------------------------------ */
+  .modal-window[data-project-theme="project-one"] {
+    --modal-bg: #1c1c1c;
+    --modal-border-color: #d4a24c;
+    --modal-heading-color: #d4a24c;
+    --modal-subheading-color: #d4a24c;
+    --modal-text-color: #f2f2f2;
+    --modal-close-color: #d4a24c;
+  }
+ 
+  .modal-window[data-project-theme="project-two"] {
+    --modal-bg: #f2f3f9;
+    --modal-border-color: #499081;
+    --modal-heading-color: #d43d79;
+    --modal-subheading-color: #b6823d;
+    --modal-text-color: #282b28;
+    --modal-close-color: #d43d79;
+  }
+ 
+  .modal-window[data-project-theme="project-three"] {
+    --modal-bg: #f7f7f7;
+    --modal-border-color: #61c2c8;
+    --modal-heading-color: #61c2c8;
+    --modal-subheading-color: #ca885f;
+    --modal-text-color: #241f21;
+    --modal-close-color: #61c2c8;
+  }
+ 
+  .modal[data-open="true"] .modal-window {
+    transform: scale(1);
+  }
+ 
+  .modal-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 2.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: none;
+    background: transparent;
+    color: var(--modal-close-color);
+    font-size: 7rem;
+    transform: scaleY(0.9);
+    line-height: 1;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .modal-close:hover { opacity: 0.6; }
+ 
+  /* Prev/next reuse .carousel-btn directly in the HTML — no
+     separate button styling needed, they inherit it verbatim. */
+ 
+  .modal-scroll {
+    flex: 1;
+    height: 100%;
+    overflow-y: auto;
+    padding-right: 0.5rem; /* room so scrollbar doesn't sit on text */
+  }
+ 
+  .modal-scroll h2 {
+    color: var(--modal-heading-color);
+    margin: 0 0 1rem;
+    font-size: clamp(24px, calc(19.2px + 1.5vw), 48px);
+    text-align: center;
+  }
+  .modal-scroll img {
+    width: 100%;
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+ 
+  /* ------------------------------------------------------------
+     MODAL BODY — this is the div you insert your own content
+     into. Each project gets its own <template data-modal-content>
+     next to its carousel card (see markup below); the JS copies
+     that template's contents in here when the modal opens.
+  ------------------------------------------------------------ */
+  .modal-body p {
+    color: var(--modal-text-color);
+    line-height: 1.5;
+    margin: 0 0 1rem;
+    font-size: clamp(16px, calc(14.4px + 0.5vw), 24px);
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: 300;
+  }
+ 
+  .modal-body h3 {
+    color: var(--modal-subheading-color);
+    margin: 1rem 0 0.5rem;
+    font-size: clamp(24px, calc(21.6px + 0.75vw), 36px);
+    color: var(--modal-subheading-color);
+    font-weight: 400;
+    padding: 0px 0px 5px 0px;
+  }
+ 
+  /* Responsive: keep the 80vw/80vh box usable on small screens */
+  @media (max-width: 700px) {
+    .modal-window {
+      width: 92vw;
+      height: 88vh;
+      padding: 1.25rem;
+      gap: 0.5rem;
+      --carousel-btn-size: 2.25rem;
+    }
+  }
+
+
+
+
+
+/* Modal contents */
+
+.images {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.vertical {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  flex-direction: column;
+}
+
+
+
+
+
+
+/* Insta popover */
+
+  .ig-popover {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 200;
+  width: min(320px, calc(100vw - 3rem));
+  background: var(--beige, #FFDFB9);
+  border: 4px solid var(--red, #A41D3E);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  /* hidden + off-screen by default, slides/fades in via [data-open] */
+  opacity: 0;
+  transform: translateY(1.5rem);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.ig-popover[data-open="true"] {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.ig-popover-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 1.75rem;
+  height: 1.75rem;
+  border: none;
+  background: transparent;
+  color: var(--red, #A41D3E);
+  font-size: 3rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.ig-popover-close:hover { opacity: 0.6; }
+
+.ig-popover-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.ig-popover-icon {
+  width: 28px;
+  height: 28px;
+  flex: 0 0 auto;
+  stroke: var(--red, #A41D3E);
+  fill: none;
+  stroke-width: 1.8;
+}
+
+.ig-popover h3 {
+  margin: 0;
+  font-size: clamp(14px, calc(12px + 0.625vw), 24px);
+  color: var(--red, #A41D3E);
+  padding-right: 1.25rem; /* clears the close button */
+}
+
+.ig-popover p {
+  margin: 0;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: clamp(12px, calc(11.2px + 0.25vw), 16px);
+  line-height: 1.4;
+  color: #1a1a1a;
+}
+
+.ig-popover-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  border: 1px solid var(--red, #A41D3E);
+  background: var(--red, #A41D3E);
+  color: var(--beige, #FFDFB9);
+  padding: 0.55rem 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  font-size: clamp(12px, calc(11.2px + 0.25vw), 16px);
+}
+.ig-popover-link:hover {
+  background: var(--beige, #FFDFB9);
+  color: var(--red, #A41D3E);
+}
+
+
+
+
+/* Colour theme switcher */
+
+  .theme-switcher {
+    position: fixed;
+    bottom: 1.25rem;
+    left: 1.25rem;
+    z-index: 300;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    background: var(--beige);
+    filter: drop-shadow(2px 2px 0px var(--red));
+    padding: 0.5rem 0.6rem;
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+ 
+  .theme-switcher-label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    font-family: "Source Sans 3", sans-serif;
+    /* letter-spacing: 0.05em; */
+    color: var(--red, #A41D3E);
+    text-transform: uppercase;
+  }
+ 
+  .theme-swatch-row {
+    display: flex;
+    gap: 0.6rem;
+  }
+ 
+  .theme-swatch {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    padding: 0;
+    /* two-colour split preview via conic-gradient — updated per
+       swatch from its data-swatch-a / data-swatch-b via inline
+       style, set once by JS from the themes config below */
+    transition: transform 0.15s ease, border-color 0.15s ease;
+  }
+ 
+  .theme-swatch:hover {
+    transform: scale(1.1);
+  }
+ 
+  .theme-swatch[data-active="true"] {
+    border-color: #1a1a1a;
+  }
+ 
+  .theme-swatch:focus-visible {
+    outline: 2px solid #1a1a1a;
+    outline-offset: 2px;
+  }
+
+
+
+
+
+
+

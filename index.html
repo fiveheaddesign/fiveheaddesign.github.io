@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 HEAD DESIGN portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="./images/5head_back.png">
+    <link rel="preload" as="image" href="./images/5head_front.png">
+    <script src="./carousel.js" defer></script>
+    <script src="./smoothscroll.js" defer></script>
+    <script src="./modal.js" defer></script>
+    <script src="./popover.js" defer></script>
+    <script src="./themeswitcher.js" defer></script>
+</head>
+<body>
+
+<!--
+    this desaturates the page when modals etc. are open
+    modal, popover, and theme switcher are excluded
+-->
+<div class="page-content" data-page-content>
+
+    <section class="hero section" id="hero">
+
+        <img class="section-img section-img--top"  src="./images/bg_text_beige_top.webp" alt="">
+        <img class="section-img section-img--bottom" src="./images/bg_unicorn_beige_bottom.webp" alt="">
+
+        <div class="herocontent contentwrapper">
+            <div class="navpositive">
+                <ul>
+                    <li>
+                        <a href="#portfolio">PORTFOLIO</a>
+                    </li>
+                    <li>
+                        <a href="#about">ABOUT</a>
+                    </li>
+                    <li>
+                        <a href="#contact">CONTACT</a>
+                    </li>
+                    <li class="spacer">
+                        &nbsp;
+                    </li>
+                    <li>
+                        <a href="#hero">HOME</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="med">
+                <p>
+                    Hi, I'm <span class="bold italic">Ally</span>.
+                </p>
+                <p>
+                    I'm a <span class="underline" title="a versatile designer, not an actual unicorn">unicorn</span> <span class="bold">designer</span> seeking <span class="italic">inspiration!</span>
+                </p>
+                <p>
+                    Let's <span class="bold">work together</span> to make something beautiful and original.
+                </p>
+                <p>
+                    Branding, print, illustration, web, photo editing, mo-graf , UI/UX, socials...
+                </p>
+                <p>
+                    ...<span class="bold italic">something else</span>?
+                </p>
+                <p>
+                    I'm <span class="bold">eager</span> and <span class="bold">available</span>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <section class="portfolio section" id="portfolio">
+
+        <!-- <img class="section-img section-img--top"  src="./images/bg_unicorn_red_top.webp" alt="">
+        <img class="section-img section-img--bottom" src="./images/bg_text_red_bottom.webp" alt=""> -->
+
+        <div class="portfoliocontent contentwrapper">
+
+            <div class="navnegative">
+                <ul>
+                    <li>
+                        <a href="#portfolio">PORTFOLIO</a>
+                    </li>
+                    <li>
+                        <a href="#about">ABOUT</a>
+                    </li>
+                    <li>
+                        <a href="#contact">CONTACT</a>
+                    </li>
+                    <li class="spacer">
+                        &nbsp;
+                    </li>
+                    <li>
+                        <a href="#hero">HOME</a>
+                    </li>
+                </ul>
+            </div>
+
+        <!-- Carousel start here -->
+
+        <div class="carousel-wrapper" data-carousel>
+            <div class="carousel-nav-group">
+            <button class="carousel-btn" data-carousel-prev aria-label="Previous">
+            <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button class="carousel-btn carousel-btn--skip" data-carousel-start aria-label="Skip to start">
+            <svg viewBox="0 0 24 24"><path d="M17 17l-6-6 6-6"/><path d="M11 17l-6-6 6-6"/></svg>
+            </button>
+        </div>
+
+            
+            <div class="carousel-track" data-carousel-track>
+
+
+
+
+                <button class="carousel-card" data-modal-index="0" data-project-theme="project-one">
+                    <img src="./images/portfolio/popupbook/popupbook_cover_01.webp" alt="">
+                    <h3>Magical Pop-up Book</h3>
+                    <p>A pop-up spell book for magical children</p>
+                </button>
+                <template data-modal-content>
+                    <div class="images">
+                        <img src="./images/portfolio/popupbook/popupbook_01.webp" alt="">
+                    </div>
+                    <h3>The Idea</h3>
+                    <p>Create an in-universe pop-up book for spellcasters to teach their children magic within the fantastic and imaginative worlds of Dungeons & Dragons.</p>
+                    <h3>Mood Boards</h3>
+                    <div class="images">
+                        <img src="./images/portfolio/popupbook/popupbook_02.webp" alt="">
+                    </div>
+                    <h3>Concept Sketches</h3>
+                    <div class="images">
+                        <img src="./images/portfolio/popupbook/popupbook_03.webp" alt="">
+                    </div>
+                    <h3>Digital Illustrations</h3>
+                    <div class="images">
+                        <img src="./images/portfolio/popupbook/popupbook_04.webp" alt="">
+                        <img src="./images/portfolio/popupbook/popupbook_05.webp" alt="">
+                        <img src="./images/portfolio/popupbook/popupbook_06.webp" alt="">
+                    </div>
+                    <h3>Paper Prototypes</h3>
+                    <div class="images">
+                        <img src="./images/portfolio/popupbook/popupbook_07.webp" alt="">
+                    </div>
+                    <h3>Mid-Fidelity Prototypes</h3>
+                    <div class="images">
+                        <img src="./images/portfolio/popupbook/popupbook_08.webp" alt="">
+                    </div>
+                    <h3>Die-Line Samples</h3>
+                    <div class="images">
+                        <img src="./images/portfolio/popupbook/popupbook_09.webp" alt="">
+                    </div>
+                    <h3>Photography</h3>
+                    <div class="vertical">
+                        <img src="./images/portfolio/popupbook/popupbook_10.webp" alt="">
+                        <img src="./images/portfolio/popupbook/popupbook_11.webp" alt="">
+                        <img src="./images/portfolio/popupbook/popupbook_12.webp" alt="">
+                    </div>
+                </template>
+                
+
+
+
+                <button class="carousel-card" data-modal-index="1" data-project-theme="project-two">
+                    <img src="./images/portfolio/ticha/ticha_cover_01.webp" alt="">
+                    <h3>Bubble Tea Kit</h3>
+                    <p>Packaging design for DIY boba at home</p>
+                </button>
+                <template data-modal-content>
+                    <div class="vertical">
+                        <img src="./images/portfolio/ticha/ticha_01.webp" alt="">
+                        <img src="./images/portfolio/ticha/ticha_02.webp" alt="">
+                        <img src="./images/portfolio/ticha/ticha_03.webp" alt="">
+                        <img src="./images/portfolio/ticha/ticha_04.webp" alt="">
+                        <img src="./images/portfolio/ticha/ticha_05.webp" alt="">
+                        <img src="./images/portfolio/ticha/ticha_06.webp" alt="">
+                        <img src="./images/portfolio/ticha/ticha_07.webp" alt="">
+                        <img src="./images/portfolio/ticha/ticha_08.webp" alt="">
+                        <img src="./images/portfolio/ticha/ticha_09.webp" alt="">
+                        <img src="./images/portfolio/ticha/ticha_10.webp" alt="">
+                    </div>
+                </template>
+                
+
+
+
+                <button class="carousel-card" data-modal-index="2" data-project-theme="project-three">
+                    <img src="./images/portfolio/artandseek/as_cover_01.webp" alt="">
+                    <h3>Art&Seek</h3>
+                    <p>Experiential design - AR, maps, and more</p>
+                </button>
+                <template data-modal-content>
+                    <div class="vertical">
+                        <img src="./images/portfolio/artandseek/experiential_portfolio__01.webp" alt="">
+                        <img src="./images/portfolio/artandseek/experiential_portfolio__02.webp" alt="">
+                        <img src="./images/portfolio/artandseek/experiential_portfolio__03.webp" alt="">
+                        <img src="./images/portfolio/artandseek/experiential_portfolio__04.webp" alt="">
+                        <img src="./images/portfolio/artandseek/experiential_portfolio__05.webp" alt="">
+                        <img src="./images/portfolio/artandseek/experiential_portfolio__06.webp" alt="">
+                        <img src="./images/portfolio/artandseek/experiential_portfolio__07.webp" alt="">
+                        <img src="./images/portfolio/artandseek/experiential_portfolio__08.webp" alt="">
+                    </div>
+                </template>
+            
+            
+            
+        
+            
+            
+            
+            
+            
+            
+            </div>
+            <div class="carousel-nav-group">
+                <button class="carousel-btn" data-carousel-next aria-label="Next">
+                <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+                </button>
+                <button class="carousel-btn carousel-btn--skip" data-carousel-end aria-label="Skip to end">
+                <svg viewBox="0 0 24 24"><path d="M7 17l6-6-6-6"/><path d="M13 17l6-6-6-6"/></svg>
+                </button>
+            </div>
+        </div>
+
+
+        </div>   
+
+    </section>
+
+
+
+
+
+
+    <section class="about section" id="about">
+
+        <img class="section-img section-img--top"  src="./images/bg_text_beige_top.webp" alt="">
+        <img class="section-img section-img--bottom" src="./images/bg_unicorn_beige_bottom.webp" alt="">
+
+        <div class="aboutcontent">
+            <div class="navpositive">
+                <ul>
+                    <li>
+                        <a href="#portfolio">PORTFOLIO</a>
+                    </li>
+                    <li>
+                        <a href="#about">ABOUT</a>
+                    </li>
+                    <li>
+                        <a href="#contact">CONTACT</a>
+                    </li>
+                    <li class="spacer">
+                        &nbsp;
+                    </li>
+                    <li>
+                        <a href="#hero">HOME</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="med">
+                <p>
+                    Following my long and arduous years of employment in many facets of the IT industry, I have bravely decided to attempt a dramatic career pivot. I recently completed two years of study in graphic and web design, and have now branched out into creative marketing.
+                </p>
+                <p>
+                    Creativity is where I experience great joy and believe that I have finally found my path forward. I read voraciously, visits art galleries and exhibitions, make both digital and traditional art, and create and perform <a href="https://instagram.com/bluesummerband" target="_blank">music</a>. I'm also really into table-top roleplaying games and am currently running a D&D campaign. I enjoy video games as well, when I have the time.
+                </p>
+                <p>
+                    My dream job, aside from being a designer, is to work at either an art gallery, book store, library, print shop, or museum.
+                </p>
+                <div class="ally-images">
+                    <img src="./images/ally05.webp" alt="">
+                    <img src="./images/ally02.webp" alt="">
+                    <img src="./images/ally03.webp" alt="">
+                    <img src="./images/ally04.webp" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <section class="contact section" id="contact">
+
+        <!-- <img class="section-img section-img--top"  src="./images/bg_unicorn_red_top.webp" alt="">
+        <img class="section-img section-img--bottom" src="./images/bg_text_red_bottom.webp" alt=""> -->
+
+        <div class="contactcontent contentwrapper">
+            <div class="navnegative">
+                <ul>
+                    <li>
+                        <a href="#portfolio">PORTFOLIO</a>
+                    </li>
+                    <li>
+                        <a href="#about">ABOUT</a>
+                    </li>
+                    <li>
+                        <a href="#contact">CONTACT</a>
+                    </li>
+                    <li class="spacer">
+                        &nbsp;
+                    </li>
+                    <li>
+                        <a href="#hero">HOME</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="contactlinks">
+                <div class="contactrow">
+                    <!-- <img src="./images/icons/mail_invert.svg" alt=""> -->
+                    <a href="mailto:ally@fivehead.design" target="_blank">
+                        <p>ally@fivehead.design</p>
+                    </a>
+                </div>
+                <div class="contactrow">
+                    <!-- <img src="./images/icons/insta_invert.svg" alt=""> -->
+                    <a href="https://instagram.com/fiveheaddesign" target="_blank">
+                        <p>@fiveheaddesign</p>
+                    </a>
+                </div>
+                <div class="contactrow">
+                    <!-- <img src="./images/icons/web_invert.svg" alt=""> -->
+                    <a href="https://behance.net/fiveheaddesign" target="_blank">
+                        <p>Behance</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+
+ 
+    
+
+<!-- MODAL -->
+
+<div class="modal" data-modal aria-hidden="true">
+  <div class="modal-window" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal-close" data-modal-close aria-label="Close">&times;</button>
+ 
+    <button class="carousel-btn" data-modal-prev aria-label="Previous project">
+      <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+ 
+    <div class="modal-scroll">
+      <h2 id="modal-title" data-modal-title></h2>
+      <div class="modal-body" data-modal-body>
+        <!-- populated from this project's <template> at open time -->
+      </div>
+    </div>
+ 
+    <button class="carousel-btn" data-modal-next aria-label="Next project">
+      <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+  </div>
+</div>
+
+
+
+
+
+
+
+<!-- INSTA POPOVER -->
+<div class="ig-popover" data-ig-popover aria-hidden="true">
+  <button class="ig-popover-close" data-ig-close aria-label="Close">&times;</button>
+ 
+  <div class="ig-popover-header">
+    <svg class="ig-popover-icon" viewBox="0 0 24 24">
+      <rect x="2" y="2" width="20" height="20" rx="5"/>
+      <circle cx="12" cy="12" r="4.5"/>
+      <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+    </svg>
+    <h3>Let's connect!</h3>
+  </div>
+ 
+  <p>Follow along for behind-the-scenes process, new work, and the occasional unicorn sighting.</p>
+ 
+  <a class="ig-popover-link" href="https://instagram.com/fiveheaddesign" target="_blank" rel="noopener">
+    Follow @fiveheaddesign
+  </a>
+</div>
+
+
+
+
+<!-- THEME SWITCHER -->
+
+<div class="theme-switcher" data-theme-switcher role="group" aria-label="Choose colour theme">
+  <span class="theme-switcher-label">Colour theme</span>
+  <div class="theme-swatch-row" data-swatch-row></div>
+</div>
+
+
+
+
+
+</body>
+</html>
