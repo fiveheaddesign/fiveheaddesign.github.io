@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *, 
 *::before, 
 *::after {
@@ -928,3 +929,23 @@ li {
 
 
 
+=======
+*, 
+*::before, 
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin: 0px;
+}
+>>>>>>> b5c9f524134534b4171a49cbb691e9bdb1a6cc51
