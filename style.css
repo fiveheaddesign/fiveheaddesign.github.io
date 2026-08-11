@@ -72,7 +72,7 @@ html {
 }
 
 .page-content.is-desaturated {
-    filter: saturate(0); /* try 0 for full grayscale, or tune between */
+    filter: saturate(0);
 }
 
 
@@ -147,8 +147,6 @@ ul {
 li {
     color: var(--red);
 }
-
-
 
 
 
@@ -947,4 +945,36 @@ li {
 
 
 
+
+/* CTA button  */
+
+.centre {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.btn-cta {
+  background-color: var(--red);
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 0.7rem;
+  border: 1px solid var(--beige);
+}
+
+.btn-cta:hover {
+  background-color: var(--beige);
+  border: 1px solid var(--red);
+}
+
+.cta-text {
+    color: var(--beige);
+    font-weight: 600;
+    font-family: "Advent Pro", serif;
+    letter-spacing: 0.2rem;
+}
+
+.cta-text:hover {
+  color: var(--red);
+  text-decoration: none;
+}
 
